@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>backspacf javascript editor</title>
+
+</head>
+<style>
+ body {background-color: #151515;}
+#codeBlock {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+  color: black;
+}
+.header {
+  background-color: gray;
+center;
+  padding: 20px;
+  font-family: Courier New,sans-serif;
+text-align:center;
+font-size:xx-large;
+}
+#backspacfLogo {font-family: Courier New,sans-serif;
+text-align:center;
+font-size:xx-large;
+color:white
+}
+#avgDivHeader {font-family: Courier New,sans-serif;
+text-align:center;
+font-size:x-large;
+color:white;
+}
+#avgTextBlock {font-family: Verdana,sans-serif;
+text-align:center;
+font-size:large;
+color:white;
+}
+#title {font-family: Courier,sans-serif;
+text-align:center;
+font-size:x-large;
+color:white;
+}
+</style>
+<body>
+<script>
+function run() {
+var codeTab = window.open("");
+var codeRun = document.getElementById("code").value;
+codeTab.document.write("<script" + ">" + codeRun + "</script" + ">");
+}
+</script>
+<script>
+/*i stole this code from someone else, and it still doesn't work right what,,,*/
+function saveAsFile() {
+var textToSave = document.getElementById("code").value;
+
+
+var hiddenElement = document.createElement('a');
+
+
+hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
+hiddenElement.target = '_blank';
+hiddenElement.download = 'page.html';
+hiddenElement.click();
+}
+</script>
+<div id="title">backspacf <b>javascript editor</b></div>
+<center><a href="#" onclick="run()" id="backspacfLogo"><b>run</b></a><br><a href="#" onclick="saveAsFile()"><b>save as... (very broken, ends at hashtag)</b></a><br><textarea rows="1000" cols="100" id="code" placeholder="enter javascript here..." spellcheck="false"></textarea></center>
+</body>
+</html>
