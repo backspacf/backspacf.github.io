@@ -1,3 +1,5 @@
 --changelog (started december 10)--
  - removed "target=_blank" because security bug ig
  - renamed "changelog" to "!changelog" so it's the first file to show up in repo
+ - deleted yandex verification html file (because i don't have an email)
+ - removed "display email" function (^)
