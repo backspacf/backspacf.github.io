@@ -17,5 +17,6 @@ have fun, and don't die. visit me at https://backspacf.github.io
  */
 (function(){
   document.write(document.getElementById(bigHTM).value);
+  alert("bruh");
   //writes all htm in this script tag.
 });
