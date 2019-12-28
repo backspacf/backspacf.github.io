@@ -16,6 +16,5 @@ have fun, and don't die. visit me at https://backspacf.github.io
 function bigHTM(){
   var bigHTM = document.getElementById('bigHTM');
   document.write(bigHTM);
-  alert("this function was activated!");
 };
 bigHTM();
