@@ -7,6 +7,5 @@ this is a javascript library built to increase ability of html by adding feature
 function bigHTM(){
   var mHTM = document.getElementById('olHTM').innerHTML;
   document.write(mHTM);
-  alert(mHTM);
 };
 bigHTM();
