@@ -16,6 +16,6 @@ have fun, and don't die. visit me at https://backspacf.github.io
     ALPHA-0.01. all this is is a thing that writes all hyper-text markup out of the script tag. more to come.
  */
 (function(){
-  document.write(document.getElementById(bigHTM));
+  document.write(document.getElementById(bigHTM).value);
   //writes all htm in this script tag.
 });
