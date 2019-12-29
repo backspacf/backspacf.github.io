@@ -1,10 +1,18 @@
 /*
-bigHTM.js by joj-the-egg.
+olHTM.js by joj-the-egg.
 this is a javascript library built to increase ability of html by adding features.
 
-    ALPHA-0.01. all this is is a thing that writes all hyper-text markup out of the script tag. more to come.
+    ALPHA-0.10. added functionality for epicDevBlock.
  */
 function newThinger() {
  var mHTM = document.getElementById('olHTM').innerHTML;
- document.write(mHTM);
+   if (
+   document.getElementById('olHTM').innerHTML.indexOf('epicDevBlock') != -1){
+   //searches for custom tag --epicDevBlock--
+       var newmHTM = mHTM.replace("epicDevBlock","a href='#' onclick='javascript:alert(newmHTM);'"
+       //replaces block name epicDevBlock to an anchor
+       var mHTM = newmHTM;
+       //i could have made mHTM equal newmHTM in the first place, but safety measures!
+   }
+   document.write(mHTM);
 }
